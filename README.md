@@ -6,7 +6,7 @@ This Bash script is designed to monitor system resources, manage processes inter
 
 ## Scripts
 
-### Main Script (`main_script.sh`)
+### Main Script (`Task_B.sh`)
 
 - Monitors system resources (CPU and memory usage).
 - Loads configurations from `Task_B_Options.conf` for thresholds and intervals.
@@ -32,7 +32,7 @@ This Bash script is designed to monitor system resources, manage processes inter
 
 - Ensure Bash is installed on your system.
 - Create and configure `Task_B_Options.conf` for custom settings such as thresholds and intervals.
-- Place `Functions_Task_B.sh` in the same directory as `main_script.sh` to ensure all functions are accessible.
+- Place `Functions_Task_B.sh` in the same directory as `Task_B.sh` to ensure all functions are accessible.
 
 ## Usage
 
@@ -44,12 +44,12 @@ This Bash script is designed to monitor system resources, manage processes inter
 
 2. **Make the script executable**:
    ```bash
-   chmod +x main_script.sh
+   chmod +x Task_B.sh
    ```
 
 3. **Run the script**:
    ```bash
-   ./main_script.sh
+   ./Task_B.sh
    ```
 
 4. **Follow the interactive menu** to perform operations related to process management and system monitoring.
@@ -59,7 +59,7 @@ This Bash script is designed to monitor system resources, manage processes inter
 ### Example 1: Starting the Script
 
 ```bash
-./main_script.sh
+./Task_B.sh
 ```
 
 This command starts the interactive menu for the System Monitoring and Process Management script, allowing you to monitor and manage system processes interactively.
@@ -70,9 +70,10 @@ Edit `Task_B_Options.conf` to customize thresholds and intervals:
 
 ```bash
 # Example Task_B_Options.conf
-UPDATE_INTERVAL=10
+UPDATE_INTERVAL=15
 CPU_THRESHOLD=85
 MEMORY_THRESHOLD=90
+ALERTS_INTERVAL=2
 ```
 
 ## Trapping Exit Signals and Cleaning Up
@@ -95,7 +96,7 @@ cleanup() {
 ## Error Handling
 
 - If `Task_B_Options.conf` is missing or incorrectly configured, default settings will be used.
-- Ensure `Functions_Task_B.sh` is present in the same directory as `main_script.sh` to avoid errors related to missing functions.
+- Ensure `Functions_Task_B.sh` is present in the same directory as `Task_B.sh` to avoid errors related to missing functions.
 
 ## Notes
 
